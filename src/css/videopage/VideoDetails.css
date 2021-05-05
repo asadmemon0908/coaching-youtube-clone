@@ -1,0 +1,94 @@
+.videoDetails{
+    flex: 0.75;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.videoDetails__details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(65, 61, 61);
+    width: 92%;
+}
+
+.videoDetails__left{
+    color: #fff;
+}
+
+.videoDetails__left h5{
+    font-size: 1.2rem;
+}
+
+.videoDetails__left p{
+    font-size: 1rem;
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.videoDetails__right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoDetails__icon{
+    color: #888;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.videoDetails__icon:hover{
+    color: #fff;
+
+}
+
+.videoAuthor__details{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.videoAuthor__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoAuthorDetails{
+    margin-left: 10px;
+}
+
+.videoAuthorDetails h6{
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.videoAuthorDetails p{
+    font-size: 0.8rem;
+    color: #b6adad;
+}
+
+.videoAuthor__right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoAuthor__right button{
+    margin-right: 20px;
+    padding: 12px 13px;
+    background: #303030;
+    outline: 0;
+    border: 0;
+    color: #dddada;
+}
