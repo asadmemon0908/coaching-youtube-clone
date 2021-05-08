@@ -12,9 +12,9 @@ const VideoColumn = ({ video, randomMonths, randomViews }) => {
 
 
 
-    function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-  }
+  //   function truncate(str, n) {
+  //   return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  // }
 
 
   const moveToVideoPage = () => {
@@ -52,7 +52,7 @@ const VideoColumn = ({ video, randomMonths, randomViews }) => {
           >
             {!playGif && videoTime && <p>{getTime(videoTime)}</p>}
 
-          <img src={video?.thumbnail} alt=""/>
+          <img src={playGif ? video?.gif : video?.thumbnail} alt=""/>
 
 
           </div>

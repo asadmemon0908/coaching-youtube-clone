@@ -3,7 +3,6 @@ import "../../css/videopage/VideoDetails.css";
 import ReactPlayer from "react-player/youtube";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import ThumbDownIcon from "@material-ui/icons/ThumbDown";
-import ShareIcon from "@material-ui/icons/Share";
 import PlaylistAddIcon from "@material-ui/icons/PlaylistAdd";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import ReplyIcon from "@material-ui/icons/Reply";

@@ -8,25 +8,46 @@
 
 .moreVideos{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
     margin: 12px 0px;
+    cursor: pointer;
 }
 
 .moreVideos__video{
-    width: 42%;
+    width: 100%;
+    display: flex;
+}
+
+.moreVideos__thumbnail{
+    position: relative;
+}
+
+.moreVideos__video .moreVideos__timestamp{
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    background-color: rgba(0,0,0,0.9);
+    padding: 5px;
+    font-size: 0.9rem;
+    bottom: 5px;
+    right: 5px;
 }
 
 .moreVideos__video img{
-    width: 100%;
-    object-fit: contain;
+    width: 250px;
+    min-width: 250px;
+    height: 14vh;
+    object-fit: cover;
+    
 }
 
 .moreVideos__details{
     color: #fff;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 6px;
+    float: left;
 }
 
 .moreVideos__details h5{

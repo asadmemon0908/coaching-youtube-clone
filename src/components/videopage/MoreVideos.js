@@ -13,7 +13,7 @@ const MoreVideos = ({mixedArray, videoId}) => {
     return (
         <div className="moreVideos__container">
         
-            {filtered20.map(video => <SideVideo video={video} />)}
+            {filtered20.map(video => <SideVideo key={video?.id} video={video} />)}
             
 
 
