@@ -8,6 +8,7 @@ const SideVideo = ({ video }) => {
 
   const playThisVideo = () => {
     history.push(`/video?vid=${video?.id}`);
+    document.title = video?.title;
   };
 
   const getTime = (time) => {

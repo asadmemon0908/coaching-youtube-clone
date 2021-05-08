@@ -18,8 +18,8 @@ const VideoColumn = ({ video, randomMonths, randomViews }) => {
 
 
   const moveToVideoPage = () => {
-    
     history.push(`/video?vid=${video?.id}`);
+    document.title = video?.title;
   }
 
 
