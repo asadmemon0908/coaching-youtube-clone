@@ -7,7 +7,10 @@ const SideVideo = ({ video }) => {
   const [timestamp, setTimestamp] = useState(null);
 
   const playThisVideo = () => {
-    history.push(`/video?vid=${video?.id}`);
+
+    const encryptedId = btoa(video?.id);
+
+    history.push(`/video?vid=${encryptedId}`);
     document.title = video?.title;
   };
 

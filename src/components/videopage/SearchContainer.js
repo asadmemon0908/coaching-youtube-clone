@@ -12,7 +12,10 @@ const SearchContainer = ({searchedVideos, setSearchValue}) => {
   }
 
   const goToVideo = (search) => {
-    history.push(`/video?vid=${search.item.id}`);
+
+    const encryptedId = btoa(search.item.id);
+
+    history.push(`/video?vid=${encryptedId}`);
     setSearchValue("");
   }
 

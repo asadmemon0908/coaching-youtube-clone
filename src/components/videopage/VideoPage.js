@@ -14,7 +14,9 @@ const VideoPage = () => {
     const dispatch = useDispatch()
 
     const query = new URLSearchParams(useLocation().search);
-    const videoId = query.get("vid");
+    const encryptedId = query.get("vid");
+
+    const videoId = atob(encryptedId);
 
     const mixedArray = [...firstLayer, ...secondLayer, ...thirdLayer, ...fourthLayer];
 
