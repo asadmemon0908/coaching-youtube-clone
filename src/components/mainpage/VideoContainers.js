@@ -10,8 +10,12 @@ import {
   fourthLayer,
 } from "../../youtubeVideos";
 import getRandom from "../../util/getRandom";
+import { useSelector } from "react-redux";
 
 const VideoContainers = () => {
+
+  const darkMode = useSelector(state => state.Dark.darkMode);
+
   const firstLayerRandom = getRandom(firstLayer, 5);
   const secondLayerRandom = getRandom(secondLayer, 5);
   const thirdLayerRandom = getRandom(thirdLayer, 5);
@@ -27,7 +31,7 @@ const VideoContainers = () => {
   const randomMixArray = getRandom(MixArray, 5);
 
   return (
-    <div className="videoContainer">
+    <div className={`videoContainer ${!darkMode ? "videoContainer__light" : ""}`}>
       <Header />
       <div className="videoContainer__row">
         {firstLayerRandom.map((video) => (

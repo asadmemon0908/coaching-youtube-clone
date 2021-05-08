@@ -5,6 +5,10 @@
     overflow-x: hidden;
 }
 
+.videoContainer__light{
+    background-color: #f8f8f8;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
   }
@@ -24,10 +28,14 @@
     background-color: #181818;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 5px;
     margin-bottom: 30px;
+}
 
+
+.videoContainer__light .videoContainer__row{
+    background-color: #f8f8f8;
 
 }
 
@@ -43,6 +51,7 @@
 .video__thumbnail img{
     width: 95%;
     height: 200px;
+    max-width: 500px;
     max-height: 200px;
     object-fit: cover;
 }
@@ -55,6 +64,10 @@
     position: relative;
     cursor: pointer;
 
+}
+
+.videoContainer__light .video__details{
+    color: #000;
 }
 
 .video__details{

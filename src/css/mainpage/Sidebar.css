@@ -5,8 +5,13 @@
     padding-right: 8px;
 }
 
+.sidebar__light{
+    background-color: #fff;
+}
+
 .sidebar__icons{
     margin-top: 20px;
+    width: 110%;
 }
 
 .sidebar__top{
@@ -28,6 +33,10 @@
     cursor: pointer;
 }
 
+.sidebar__light .sidebar__icon{
+    color: #5c5b5b;
+}
+
 .sidebar__icon p{
     font-size: 0.6rem;
     margin-top: 8px;
@@ -37,6 +46,14 @@
     background-color: rgb(68, 66, 66);
 }
 
+.sidebar__light .sidebar__icon:hover{
+    background-color: rgb(233, 214, 214);
+}
+
 .sidebar__active{
     color: #fff;
+}
+
+.sidebar__light .sidebar__active{
+    color: red;
 }

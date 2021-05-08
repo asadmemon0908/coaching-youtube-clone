@@ -5,12 +5,23 @@ import HomeIcon from '@material-ui/icons/Home';
 import ExploreIcon from '@material-ui/icons/Explore';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
+import SettingsBrightnessIcon from '@material-ui/icons/SettingsBrightness';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDarkMode } from '../../redux/dark mode/darkModeActions';
 
 const Sidebar = () => {
+    const dispatch = useDispatch();
+
+    const darkMode = useSelector(state => state.Dark.darkMode);
+
+    const changeMode = () => {
+        dispatch(setDarkMode(!darkMode));
+    }
+
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${!darkMode ? "sidebar__light" : ""}`}>
             <div className="sidebar__top">
-                <MenuIcon  style={{fill: "#fff"}} />
+                <MenuIcon  style={{fill: `${darkMode ? "#fff" : "#5c5b5b"}`, marginLeft: "10px"}} />
             </div>
             <div className="sidebar__icons">
                 <div className="sidebar__icon sidebar__active">
@@ -29,6 +40,10 @@ const Sidebar = () => {
                     <LibraryAddIcon />
                     <p>Library</p>
                 </div>
+                <div onClick={changeMode} className="sidebar__icon">
+                <SettingsBrightnessIcon />
+                <p>{darkMode ? "Light Mode" : "Dark Mode"}</p>
+            </div>
             </div>
         </div>
     );

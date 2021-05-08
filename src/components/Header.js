@@ -10,8 +10,12 @@ import { useHistory } from 'react-router';
 import Fuse from 'fuse.js';
 import {firstLayer, secondLayer, thirdLayer, fourthLayer} from "../youtubeVideos";
 import SearchContainer from './videopage/SearchContainer';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+
+    const darkMode = useSelector(state => state.Dark.darkMode);
+
     const history = useHistory();
 
     const [searchValue, setSearchValue] = useState("");
@@ -37,10 +41,13 @@ const Header = () => {
 
 
     return (
-        <div className="header">
+        <div className={`header ${!darkMode ? "header__light" : ""}`}>
             <div  className="header__left">
-                <img onClick={() => history.push("/")} src="https://i.ibb.co/G5XxVhW/You-Tube-dark-removebg-preview.png" alt="youtube-logo"/>
+                <img onClick={() => history.push("/")} src={`${darkMode ? "https://i.ibb.co/G5XxVhW/You-Tube-dark-removebg-preview.png" : "https://www.freeiconspng.com/uploads/youtube-logo-png-transparent-image-5.png"}`} alt="youtube-logo"/>
             </div>
+
+            
+
 
 
 
@@ -52,7 +59,7 @@ const Header = () => {
                             <SearchIcon style={{fill: "#888"}} />
                         </div>
                         <Tooltip title="Search with voice">
-                    <MicIcon style={{fill: "#fff"}} />
+                    <MicIcon style={{fill: `${darkMode ? "#fff" : "#5c5b5b"}`}} />
                     </Tooltip>
                     </div>
                 </div>
@@ -64,13 +71,13 @@ const Header = () => {
             
             <div className="header__right">
                 <Tooltip title="create">
-                <VideoCallIcon  style={{fill: "#fff"}} />
+                <VideoCallIcon  style={{fill: `${darkMode ? "#fff" : "#5c5b5b"}`}} />
                 </Tooltip>
                 <Tooltip title="Apps">
-                <AppsIcon  style={{fill: "#fff"}} />
+                <AppsIcon  style={{fill: `${darkMode ? "#fff" : "#5c5b5b"}`}} />
                 </Tooltip>
                 <Tooltip title="Notifications">
-                <NotificationsIcon  style={{fill: "#fff"}} />
+                <NotificationsIcon  style={{fill: `${darkMode ? "#fff" : "#5c5b5b"}`}} />
                 </Tooltip>
                 <Avatar style={{ height: '30px', width: '30px', marginLeft: "10px" }} alt="Asad Memon" />
             </div>
